@@ -91,9 +91,15 @@ export class TagInputComponent extends TagInputAccessor implements OnInit, After
 
     /**
      * @name maxItems
-     * @desc maximum number of items that can be added
+     * @desc maximum number of text
      */
     @Input() public maxlength: number;
+
+    /**
+     * @name maxItems
+     * @desc minimun number of text
+     */
+    @Input() public minlength: number;
 
     /**
      * @name validators
