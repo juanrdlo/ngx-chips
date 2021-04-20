@@ -198,7 +198,11 @@ export class TagInputForm implements OnInit, OnChanges {
         if ($event.key === 'Enter') {
             this.submit($event);
         } else {
-          return this.onKeydown.emit($event);
+          if (this.value.value.length >= 10) {
+            return false;
+          } else {
+            return this.onKeydown.emit($event);
+          }
         }
     }
 
