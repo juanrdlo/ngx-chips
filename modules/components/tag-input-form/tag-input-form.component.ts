@@ -61,6 +61,11 @@ export class TagInputForm implements OnInit, OnChanges {
     @Input() public inputId: string;
 
     /**
+     * @name maxLength
+     */
+    @Input() public maxLength: number;
+
+    /**
      * @name inputClass
      */
     @Input() public inputClass: string;
@@ -198,7 +203,7 @@ export class TagInputForm implements OnInit, OnChanges {
         if ($event.key === 'Enter') {
             this.submit($event);
         } else {
-          if (this.value.value.length >= 10) {
+          if (this.value.value.length >= this.maxLength) {
             return false;
           } else {
             return this.onKeydown.emit($event);

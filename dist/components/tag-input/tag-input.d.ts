@@ -35,6 +35,11 @@ export declare class TagInputComponent extends TagInputAccessor implements OnIni
      */
     maxItems: number;
     /**
+     * @name maxItems
+     * @desc maximum number of items that can be added
+     */
+    maxlength: number;
+    /**
      * @name validators
      * @desc array of Validators that are used to validate the tag before it gets appended to the list
      */

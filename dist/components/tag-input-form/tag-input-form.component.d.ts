@@ -43,6 +43,10 @@ export declare class TagInputForm implements OnInit, OnChanges {
      */
     inputId: string;
     /**
+     * @name maxLength
+     */
+    maxLength: number;
+    /**
      * @name inputClass
      */
     inputClass: string;
